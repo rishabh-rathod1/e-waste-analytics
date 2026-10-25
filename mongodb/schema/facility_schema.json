@@ -1,0 +1,90 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "RecyclingFacility",
+  "description": "Schema for European E-Waste Recycling and Treatment Infrastructure Facilities",
+  "type": "object",
+  "required": [
+    "facility_id",
+    "name",
+    "country_code",
+    "country_name",
+    "city",
+    "latitude",
+    "longitude",
+    "annual_capacity_mg",
+    "facility_type",
+    "processing_types",
+    "accepted_categories",
+    "status",
+    "is_sample_data"
+  ],
+  "properties": {
+    "facility_id": {
+      "type": "string",
+      "description": "Unique identifier for the facility"
+    },
+    "name": {
+      "type": "string",
+      "description": "Operating name of the facility"
+    },
+    "country_code": {
+      "type": "string",
+      "pattern": "^[A-Z]{3}$",
+      "description": "ISO-3166-1 alpha-3 country code matching FutuRaM dataset"
+    },
+    "country_name": {
+      "type": "string",
+      "description": "Full country name"
+    },
+    "city": {
+      "type": "string",
+      "description": "City or municipality"
+    },
+    "latitude": {
+      "type": "number",
+      "minimum": 34.0,
+      "maximum": 72.0,
+      "description": "Geographic latitude coordinate"
+    },
+    "longitude": {
+      "type": "number",
+      "minimum": -25.0,
+      "maximum": 40.0,
+      "description": "Geographic longitude coordinate"
+    },
+    "annual_capacity_mg": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Annual treatment/recycling throughput capacity in Megagrams (Metric Tons)"
+    },
+    "facility_type": {
+      "type": "string",
+      "enum": [
+        "Specialized Smelter & Refining",
+        "Mechanical Separation & Shredding",
+        "Precious & Critical Metal Recovery",
+        "Battery & Accumulator Recycling",
+        "Cooling & Temperature Depollution",
+        "Integrated WEEE Dismantling & Sorting"
+      ]
+    },
+    "processing_types": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "List of technical processes (e.g. Pyrometallurgy, Hydrometallurgy, Optical Sorting)"
+    },
+    "accepted_categories": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Accepted EU Layer 1 WEEE Categories (WEEE_Cat1 through WEEE_Cat6)"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["Operational", "Expanding", "Planned", "Modernization"]
+    },
+    "is_sample_data": {
+      "type": "boolean",
+      "description": "Explicit flag marking this as reference sample data"
+    }
+  }
+}

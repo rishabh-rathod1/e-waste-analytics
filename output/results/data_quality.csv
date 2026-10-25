@@ -1,0 +1,23 @@
+Metric,Value,Description
+total_records,17521915,Total records in dataset
+file_size_gb,2.07,File size on disk in GB
+year_min,2010,Earliest recorded year
+year_max,2050,Latest projected year
+location_count,31,Number of distinct geographic locations
+scenario_count,4,"Number of scenarios (e.g. OBS, BAU, REC, CIR)"
+stock_flow_count,8,Number of stock/flow classifications
+category_count,7,Number of Layer 1 WEEE categories
+unit_count,1,Distinct measurement units
+invalid_numeric_records,0,Rows with non-parseable numeric values
+null_count_Waste Stream,0,Null/blank count in column Waste Stream
+null_count_Location,0,Null/blank count in column Location
+null_count_Year,0,Null/blank count in column Year
+null_count_Scenario,0,Null/blank count in column Scenario
+null_count_additionalSpecification,17521915,Null/blank count in column additionalSpecification
+null_count_Stock/Flow ID,0,Null/blank count in column Stock/Flow ID
+null_count_Layer 1,0,Null/blank count in column Layer 1
+null_count_Layer 2,139963,Null/blank count in column Layer 2
+null_count_Layer 3,1207874,Null/blank count in column Layer 3
+null_count_Layer 4,3202880,Null/blank count in column Layer 4
+null_count_Value,0,Null/blank count in column Value
+null_count_Unit,0,Null/blank count in column Unit

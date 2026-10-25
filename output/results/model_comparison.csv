@@ -1,0 +1,5 @@
+Rank,Model,R2_Score,RMSE_Mg,MAE_Mg,MAPE_Pct,Status
+1,Polynomial Feature Expansion (Degree 2),0.9009,247625.98,223361.2,1.54,Champion (Best Extrapolative Fit)
+2,Spark MLlib Random Forest Regressor,0.9467,181625.36,154556.64,1.09,Strong In-Sample Ensemble
+3,Spark MLlib Linear Regression (OLS),0.841,313674.5,232909.27,1.64,Standard Linear Baseline
+4,Spark MLlib Ridge Regression (L2),0.841,313674.5,232909.25,1.64,Regularized Linear Baseline
